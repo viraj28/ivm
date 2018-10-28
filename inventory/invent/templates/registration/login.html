@@ -1,0 +1,15 @@
+{% extends "invent/header.html" %}
+{% block content%}
+<!-- templates/registration/login.html -->
+<head><title>LOGIN</title></head>
+<div class="container-fluid" style="background-color:#ffeffe; padding:20px">
+    <div class="col-lg-5 col-lg-offset-5" >
+        <h2>Login</h2>
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-info">Login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

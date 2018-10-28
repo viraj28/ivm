@@ -1,0 +1,18 @@
+{%extends "invent/header.html" %}
+        {% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="background-color:#ffeffe; padding:20px">
+    <div class="col-lg-5 col-lg-offset-5" >
+        <h2>
+        {% if user.is_authenticated %}
+          Hi {{ user.username }}!
+            <p><a href="{% url 'logout' %}">logout</a></p>
+        {% else %}
+          <p>You are not logged in</p>
+          <a href="{% url 'login' %}">login</a>
+        {% endif %}
+    </h2>
+    </div>
+</div>
+{% endblock %}
