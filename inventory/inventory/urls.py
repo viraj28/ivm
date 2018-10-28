@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #url(r'^$', include('invent.urls')),
     path('', TemplateView.as_view(template_name='invent/home.html'), name='home'),
+    path('accounts/', include('accounts.urls')), # new
     path('accounts/',include('django.contrib.auth.urls')),
 
 ]
